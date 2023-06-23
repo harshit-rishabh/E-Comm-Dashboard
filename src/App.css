@@ -6,6 +6,31 @@
   height: 40vmin;
   pointer-events: none;
 }
+.navbar{
+
+  background-color: skyblue;
+}
+.navbar li{
+  display: inline-block;
+  padding: 15px;
+}
+
+.navbar li a{
+  color: floralwhite;
+  text-decoration: none;
+}
+.navbar li a:hover{
+  color: green;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  background-color: lightskyblue;
+  color: whitesmoke;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
