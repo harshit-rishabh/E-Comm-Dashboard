@@ -1,29 +1,63 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-.navbar{
 
+.navbar {
+  margin-top: 0px;
   background-color: skyblue;
 }
-.navbar li{
+
+.navbar li {
   display: inline-block;
   padding: 15px;
 }
 
-.navbar li a{
+.navbar li a {
   color: floralwhite;
   text-decoration: none;
+  text-align: left;
 }
-.navbar li a:hover{
+
+.navbar li a:hover {
   color: green;
 }
 
-.footer{
+.register {
+  display: block;
+  margin-left: 31%;
+}
+
+.register h2{
+  display: block;
+  margin-left: 17%;
+}
+
+.input {
+  display: block;
+  margin: 19px;
+  padding: 9px;
+  width: 345px;
+  border: 2px solid black;
+  border-radius: 6px
+}
+
+.signup {
+  display: block;
+  margin-left: 128px;
+  width: 107px;
+  padding: 7px;
+  background-color: lightskyblue;
+  border: 2px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.footer {
   position: absolute;
   bottom: 0px;
   text-align: center;
@@ -57,6 +91,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
