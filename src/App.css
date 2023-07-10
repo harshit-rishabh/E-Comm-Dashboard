@@ -27,10 +27,15 @@
   color: green;
 }
 
+.navbar-right{
+  text-align: right;
+}
 .register {
   display: block;
   margin-left: 31%;
+  margin-top: 80px
 }
+
 .login {
   display: block;
   margin-left: 31%;
@@ -51,9 +56,10 @@
   border-radius: 6px
 }
 
-.signup {
+.button {
   display: block;
-  margin-left: 140px;
+  margin-top: 4px;
+  margin-left: 150px;
   width: 107px;
   padding: 7px;
   background-color: lightskyblue;
@@ -69,6 +75,42 @@
   width: 100%;
   background-color: lightskyblue;
   color: whitesmoke;
+}
+
+.logo{
+  float: left;
+  width: 71px;
+  margin-top: 0px;
+  border-radius: 47%;
+  margin-left:10px
+}
+
+.invalid-input{
+  color: red;
+  margin-left: 20px;
+  display: block;
+  margin-top: -20px;
+  font-size: 14px;
+}
+
+.productlist{
+  text-align: center;
+}
+
+.productlist table{
+  /* display: block; */
+  margin-left: 20%;
+  padding:20px;
+  border: 1px solid rgb(0, 213, 255);
+  border-radius: 3px;
+}
+
+.productlist td{
+  /* display: inline-block; */
+  /* margin:10px; */
+  width:120px;
+  border: 1px solid rgb(0, 213, 255);
+  border-radius: 3px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -25,11 +25,11 @@ export default function SignUp(){
     }
     return (
         <div className="register">
-            <h2 >Register</h2>
+            <h2 className="register-head">Register</h2>
             <input className = "input" type="text" placeholder="Name" onChange={(e)=>setName(e.target.value)} />
             <input className = "input" type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} />
             <input className = "input" type="password" placeholder="Password" onChange={(e)=>setPass(e.target.value)}/>
-            <button className="signup" onClick={getdata} >SignUp</button>
+            <button className="button" onClick={getdata} >SignUp</button>
         </div>
     )
 }
