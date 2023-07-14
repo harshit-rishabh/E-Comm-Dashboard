@@ -113,6 +113,14 @@
   border-radius: 3px;
 }
 
+
+search-btn{
+  margin: 10px;
+  width: 274px;
+  height: 22px;
+  padding: 8px;
+  border: 1.5px solid lightskyblue;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

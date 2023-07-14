@@ -1,39 +1,54 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
- export default function Addproduct(){
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+ export default function Updateproduct(){
     const [name, setname] = useState();
     const [price, setprice] = useState();
     const [category, setcategory] = useState();
     const [company, setcompany] = useState();
     const [err, seterr] = useState(false);
+    const params = useParams();
     const navigate = useNavigate();
-    const addproduct = async ()=>{
+    useEffect(()=>{
+        prefilldata();
+    },[])
+    const prefilldata = async ()=>{
+        let result = await fetch(`http://localhost:5000/getlist/${params.id}`);
+        result = await result.json();
+        // console.log(result);
+        setname(result.name);
+        setprice(result.price);
+        setcategory(result.category);
+        setcompany(result.company);
+    } 
+    const updateproduct = async ()=>{
 
-        const productdata = {name, price, category, company}
-        if(!name || !price || !category || !company){
-            seterr(true);
-            return false;
-        }
-        // console.log(productdata);
-        let userId = JSON.parse(localStorage.getItem('user'))._id;
-        // console.log(userId);
-        let result = await fetch('http://localhost:5000/addproduct',{
-            method:'post',
+        const productdata = {name, price, category, company};
+        // console.log(productdata)
+        // if(!name || !price || !category || !company){
+        //     seterr(true);
+        //     return false;
+        // }
+        // // console.log(productdata);
+        // let userId = JSON.parse(localStorage.getItem('user'))._id;
+        // // console.log(userId);
+        let result = await fetch(`http://localhost:5000/getlist/${params.id}`,{
+            method:'Put',
             headers:{
                 'Content-type':'application/json'
             },
             body: JSON.stringify(productdata)
         })
         result = await result.json();
+        // getlist();
         navigate('/');
-        alert('Product added successfully. Plz click ok to see list')
-
+        alert('Product updated successfully. Plz click enter to  see updatedlist.')
     }
+   
     return (
 
         <div className="register">
               
-            <h1>Add Product</h1>
+            <h1>Update Product</h1>
 
             <input type="text" className="input" value = {name} placeholder="Enter product name" 
             onChange={(e)=>{setname(e.target.value)}}/>
@@ -51,7 +66,7 @@ import { useNavigate } from "react-router-dom";
             onChange={(e)=>{setcompany(e.target.value)}}/>
             {err && !company && <span className="invalid-input">Company can't be empty</span>}
 
-            <button className="button" onClick={addproduct}>Add now</button>
+            <button className="button" onClick={updateproduct}>Update now</button>
 
         </div>
     )
