@@ -21,7 +21,6 @@ function App() {
         <Route path='/add' element ={<Addproduct />} />
         <Route path='/update/:id' element ={<Updateproduct />} />
         <Route path='/logout' element ={<h1>Logout</h1>} />
-        <Route path='/profile' element ={<h1>Profile Page</h1>} />
         </Route>
 
         <Route path='/signup' element ={<SignUp />} />

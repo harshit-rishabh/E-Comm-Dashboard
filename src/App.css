@@ -114,12 +114,13 @@
 }
 
 
-search-btn{
+.search-btn{
   margin: 10px;
   width: 274px;
   height: 22px;
   padding: 8px;
   border: 1.5px solid lightskyblue;
+  border-radius: 2px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

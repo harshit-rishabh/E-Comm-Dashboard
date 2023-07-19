@@ -14,7 +14,6 @@ export default function Nav() {
                 <li><Link to="/">Our Products</Link></li>
                 <li><Link to="/add">Add Product</Link></li>
                 <li><Link to="/update">Update Product</Link></li>
-                <li><Link to="/profile">Profile</Link></li>
                 <li><Link to="/signup" onClick={logout}>Logout({JSON.parse(checkey).name})</Link></li>
             </ul>
                 :
