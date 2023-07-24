@@ -12,7 +12,7 @@ export default function Login() {
     })
     async function logindata(){
         console.log({email, pass})
-        let result = await fetch('http://localhost:5000/login',{
+        let result = await fetch('https://ecommbackend-ixfo.onrender.com/login',{
             method:'post',
             headers:{
                 'Content-Type':'application/json'

@@ -13,7 +13,7 @@ export default function SignUp(){
     })
     async function getdata(){
         let data = {name, email, pass}
-        let result = await fetch('http://localhost:5000/signup',{
+        let result = await fetch('https://ecommbackend-ixfo.onrender.com/signup',{
             method:'post',
             headers:{
                 'Content-Type':'application/json'},

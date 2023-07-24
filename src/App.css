@@ -20,11 +20,12 @@
 .navbar li a {
   color: floralwhite;
   text-decoration: none;
-  text-align: left;
+   text-align: left;
 }
 
 .navbar li a:hover {
   color: green;
+  /* background-color: white; */
 }
 
 .navbar-right{

@@ -12,7 +12,7 @@ import { useNavigate, useParams } from "react-router-dom";
         prefilldata();
     },[])
     const prefilldata = async ()=>{
-        let result = await fetch(`http://localhost:5000/getlist/${params.id}`);
+        let result = await fetch(`https://ecommbackend-ixfo.onrender.com/getlist/${params.id}`);
         result = await result.json();
         // console.log(result);
         setname(result.name);
@@ -31,7 +31,7 @@ import { useNavigate, useParams } from "react-router-dom";
         // // console.log(productdata);
         // let userId = JSON.parse(localStorage.getItem('user'))._id;
         // // console.log(userId);
-        let result = await fetch(`http://localhost:5000/getlist/${params.id}`,{
+        let result = await fetch(`https://ecommbackend-ixfo.onrender.com/getlist/${params.id}`,{
             method:'Put',
             headers:{
                 'Content-type':'application/json'

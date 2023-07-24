@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
         // console.log(productdata);
         let userId = JSON.parse(localStorage.getItem('user'))._id;
         // console.log(userId);
-        let result = await fetch('http://localhost:5000/addproduct',{
+        let result = await fetch('https://ecommbackend-ixfo.onrender.com/addproduct',{
             method:'post',
             headers:{
                 'Content-type':'application/json'

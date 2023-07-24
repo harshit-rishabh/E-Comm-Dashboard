@@ -8,13 +8,13 @@ function Productlist() {
         getlist();
     },[])
     const getlist = async ()=>{
-        let result = await fetch('http://localhost:5000/getlist');
+        let result = await fetch('https://ecommbackend-ixfo.onrender.com/getlist');
         result = await result.json();
         setproducts(result);
         console.log(result);
     }
     const deleteproduct = async (id)=>{
-       let result = await fetch(`http://localhost:5000/deleteproduct/${id}`,{
+       let result = await fetch(`https://ecommbackend-ixfo.onrender.com/deleteproduct/${id}`,{
         method:'delete'
        })
        getlist();
@@ -25,7 +25,7 @@ function Productlist() {
     }
     const searchbtn = async (e)=>{
       if(e){
-        let result = await fetch(`http://localhost:5000/search/${e}`);
+        let result = await fetch(`https://ecommbackend-ixfo.onrender.com/search/${e}`);
         result = await result.json();
         if(result){
           setproducts(result);
