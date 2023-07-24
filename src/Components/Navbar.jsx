@@ -9,12 +9,12 @@ export default function Nav() {
     }
     return (
         <div>
-            <img  className = "logo" src="https://banner2.cleanpng.com/20180811/hts/kisspng-e-commerce-web-design-website-development-internet-ebook-vendors-mspbasics-com-5b6e96a9c05a40.5743099315339741857879.jpg" alt="" />
+            <img  className = "logo" src="https://i.pinimg.com/1200x/71/84/34/71843490677a24951318483a8c4e4681.jpg" alt="" />
             {checkey ? <ul className="navbar">
                 <li><Link to="/">Our Products</Link></li>
                 <li><Link to="/add">Add Product</Link></li>
                 <li><Link to="/update">Update Product</Link></li>
-                <li><Link to="/signup" onClick={logout}>Logout({JSON.parse(checkey).name})</Link></li>
+                <li><Link to="/signup" onClick={logout}>(Hello {JSON.parse(checkey).name})Logout</Link></li>
             </ul>
                 :
                 <ul className="navbar navbar-right">
