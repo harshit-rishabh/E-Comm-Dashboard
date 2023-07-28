@@ -28,11 +28,11 @@ export default function Login() {
         }
     }
     return (
-        <div className="login">
-            <h1>Login</h1>
-            <input className="input" type="text" placeholder="Email"  onChange={(e)=>setEmail(e.target.value)}/>
-            <input className="input" type="password" placeholder="Password" onChange={(e)=>setpass(e.target.value)} />
-            <button className="button" onClick={logindata}>Login</button>
+        <div className="flex flex-col justify-center items-center mt-28 space-y-3 min-w-fit">
+            <h1 className="text-4xl font-medium">Login</h1>
+            <input className="border-2 border-black rounded-md p-2  w-96" type="text" placeholder="Email"  onChange={(e)=>setEmail(e.target.value)}/>
+            <input className="border-2 border-black rounded-md p-2  w-96" type="password" placeholder="Password" onChange={(e)=>setpass(e.target.value)} />
+            <button className="border-2 border-black bg-sky-400 rounded-md w-24 p-1 font-medium text-md" onClick={logindata}>Login</button>
         </div>
     )
 }

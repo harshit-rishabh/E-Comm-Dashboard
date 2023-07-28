@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import deleteicon from './assets/deleteicon.svg'
+import updateicon from './assets/updateicon.svg'
 
 function Productlist() {
     const [products, setproducts] = useState([]);
@@ -35,38 +37,48 @@ function Productlist() {
       }
     }
   return (
-    <div className='productlist'>
-      <h1>Product List</h1>
-      <input  className = 'search-btn' type="text" placeholder='Search here' onChange={(e)=>searchbtn(e.target.value)} />
-      <table>
-        <tbody>
-      <tr>
-        <td>S.No</td>
-        <td>Name</td>
-        <td>Price</td>
-        <td>Category</td>
-        <td>Company</td>
-        <td>Operations</td>
+    <div className='flex flex-col items-center min-w-[450px] pt-20 space-y-3 w-[100%]'>
+      <h1 className='text-3xl font-medium'>Product List</h1>
+      <input  className = 'border-2 border-sky-300 rounded-md p-0.5 w-80 min-w-fit' type="text" placeholder='Search here' onChange={(e)=>searchbtn(e.target.value)} />
+      {
+      products.length>0?
+      <div className='min-w-[400px]'>
+      <table className='border-2 border-sky-300 rounded-md bg-white '>
+        <thead>
+      <tr className='text-center'>
+        <td className='border-2 border-sky-300 rounded-md p-1 font-medium'>S.No</td>
+        <td className='border-2 border-sky-300 rounded-md p-1 font-medium'>Name</td>
+        <td className='border-2 border-sky-300 rounded-md p-1 font-medium'>Price</td>
+        <td className='border-2 border-sky-300 rounded-md p-1 font-medium'>Category</td>
+        <td className='border-2 border-sky-300 rounded-md p-1 font-medium'>Company</td>
+        <td className='border-2 border-sky-300 rounded-md p-1 font-medium'>Operations</td>
       </tr>
+      </thead>
       
+      <tbody>
         {
-            products.length>0 ? products.map((item, counter)=>
-            <tr>
-                <td>{counter+1}</td>
-                <td>{item.name}</td>
-                <td>{item.price}</td>
-                <td>{item.category}</td>
-                <td>{item.company}</td>
-                <td><button onClick={()=>deleteproduct(item._id)}>Delete</button>
-                <button onClick={()=>updateproduct(item._id)}>Update</button></td>
+            products.map((item, counter)=>
+            <tr className='text-center'>
+                <td className='border-2 border-sky-300 rounded-md p-1'>{counter+1}</td>
+                <td className='border-2 border-sky-300 rounded-md p-1'>{item.name}</td>
+                <td className='border-2 border-sky-300 rounded-md p-1'>{item.price}</td>
+                <td className='border-2 border-sky-300 rounded-md p-1'>{item.category}</td>
+                <td className='border-2 border-sky-300 rounded-md p-1'>{item.company}</td>
+                <td className='border-2 border-sky-300 rounded-md p-1'>
+                  <div className="space-x-1 flex flex-row">
+                <img className='hover:cursor-pointer w-10' onClick={()=>deleteproduct(item._id)} src={deleteicon} alt="" />
+                <img className='hover:cursor-pointer w-10' onClick={()=>updateproduct(item._id)} src={updateicon} alt="" />
+                </div>
+                </td>
                 </tr>
                 )
-                :
-                <h2>No Result Found</h2>
-            }
-            </tbody>
+              }
+              </tbody>
       </table>
-
+      </div>
+              :
+              <h2>No Result Found</h2>
+}
     </div>
   )
 }

@@ -46,27 +46,27 @@ import { useNavigate, useParams } from "react-router-dom";
    
     return (
 
-        <div className="register">
+        <div className="flex flex-col justify-center items-center mt-24 space-y-3 min-w-fit">
               
-            <h1>Update Product</h1>
+            <h1 className="text-4xl font-medium ">Update Product</h1>
 
-            <input type="text" className="input" value = {name} placeholder="Enter product name" 
+            <input type="text" className = "border-2 border-black rounded-md p-2  w-96" value = {name} placeholder="Enter product name" 
             onChange={(e)=>{setname(e.target.value)}}/>
             {err && !name && <span className="invalid-input">Name can't be empty</span>}
 
-            <input type="text" className="input" value = {price} placeholder="Enter price"
+            <input type="text" className = "border-2 border-black rounded-md p-2  w-96" value = {price} placeholder="Enter price"
              onChange={(e)=>{setprice(e.target.value)}}/>
              {err && !price && <span className="invalid-input">Price can't be empty</span>}
 
-            <input type="text" className="input" value = {category} placeholder="Enter category" 
+            <input type="text" className = "border-2 border-black rounded-md p-2  w-96" value = {category} placeholder="Enter category" 
             onChange={(e)=>{setcategory(e.target.value)}}/>
             {err && !category && <span className="invalid-input">Category can't be empty</span>}
 
-            <input type="text" className="input" value = {company} placeholder="Enter company" 
+            <input type="text" className = "border-2 border-black rounded-md p-2  w-96" value = {company} placeholder="Enter company" 
             onChange={(e)=>{setcompany(e.target.value)}}/>
             {err && !company && <span className="invalid-input">Company can't be empty</span>}
 
-            <button className="button" onClick={updateproduct}>Update now</button>
+            <button className="border-2 border-black bg-sky-400 rounded-md w-28 p-1 font-medium text-md" onClick={updateproduct}>Update now</button>
 
         </div>
     )
