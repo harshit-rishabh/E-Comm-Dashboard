@@ -25,7 +25,7 @@ export default function SignUp(){
         if(result)navigate('/')
     }
     return (
-        <div className="flex flex-col justify-center items-center mt-28 space-y-3 min-w-fit">
+        <div className="flex flex-col justify-center items-center mt-28 space-y-3 min-w-[450px]">
             <h2 className="text-4xl font-medium ">Register</h2>
             <input className = "border-2 border-black rounded-md p-2  w-96" type="text" placeholder="Name" onChange={(e)=>setName(e.target.value)} />
             <input className = "border-2 border-black rounded-md p-2 min-w-fit w-96" type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} />

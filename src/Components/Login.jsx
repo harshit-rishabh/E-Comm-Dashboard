@@ -28,7 +28,7 @@ export default function Login() {
         }
     }
     return (
-        <div className="flex flex-col justify-center items-center mt-28 space-y-3 min-w-fit">
+        <div className="flex flex-col justify-center items-center mt-28 space-y-3 min-w-[450px]">
             <h1 className="text-4xl font-medium">Login</h1>
             <input className="border-2 border-black rounded-md p-2  w-96" type="text" placeholder="Email"  onChange={(e)=>setEmail(e.target.value)}/>
             <input className="border-2 border-black rounded-md p-2  w-96" type="password" placeholder="Password" onChange={(e)=>setpass(e.target.value)} />
