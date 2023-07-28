@@ -31,7 +31,7 @@ import { useNavigate } from "react-router-dom";
     }
     return (
 
-        <div className="flex flex-col justify-center items-center mt-24 space-y-3 min-w-fit">
+        <div className="flex flex-col justify-center items-center mt-24 space-y-3 min-w-[450px]">
               
             <h1 className="text-4xl font-medium ">Add Product</h1>
 
