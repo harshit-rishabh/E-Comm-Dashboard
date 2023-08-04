@@ -52,19 +52,19 @@ import { useNavigate, useParams } from "react-router-dom";
 
             <input type="text" className = "border-2 border-black rounded-md p-2  w-96" value = {name} placeholder="Enter product name" 
             onChange={(e)=>{setname(e.target.value)}}/>
-            {err && !name && <span className="invalid-input">Name can't be empty</span>}
+            {err && !name && <span className="text-sm text-red-600">Name can't be empty</span>}
 
             <input type="text" className = "border-2 border-black rounded-md p-2  w-96" value = {price} placeholder="Enter price"
              onChange={(e)=>{setprice(e.target.value)}}/>
-             {err && !price && <span className="invalid-input">Price can't be empty</span>}
+             {err && !price && <span className="text-sm text-red-600">Price can't be empty</span>}
 
             <input type="text" className = "border-2 border-black rounded-md p-2  w-96" value = {category} placeholder="Enter category" 
             onChange={(e)=>{setcategory(e.target.value)}}/>
-            {err && !category && <span className="invalid-input">Category can't be empty</span>}
+            {err && !category && <span className="text-sm text-red-600">Category can't be empty</span>}
 
             <input type="text" className = "border-2 border-black rounded-md p-2  w-96" value = {company} placeholder="Enter company" 
             onChange={(e)=>{setcompany(e.target.value)}}/>
-            {err && !company && <span className="invalid-input">Company can't be empty</span>}
+            {err && !company && <span className="text-sm text-red-600">Company can't be empty</span>}
 
             <button className="border-2 border-black bg-sky-400 rounded-md w-28 p-1 font-medium text-md" onClick={updateproduct}>Update now</button>
 

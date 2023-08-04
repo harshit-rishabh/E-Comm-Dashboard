@@ -10,7 +10,7 @@ export default function SignUp(){
         if(checkey){
             navigate('/')
         }
-    })
+    },[])
     async function getdata(){
         let data = {name, email, pass}
         let result = await fetch('https://ecommbackend-ixfo.onrender.com/signup',{

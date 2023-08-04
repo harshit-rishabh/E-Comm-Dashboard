@@ -9,7 +9,7 @@ export default function Login() {
         if(checkey){
             navigate('/')
         }
-    })
+    },[])
     async function logindata(){
         console.log({email, pass})
         let result = await fetch('https://ecommbackend-ixfo.onrender.com/login',{
