@@ -35,7 +35,6 @@ import { useNavigate, useParams } from "react-router-dom";
             method:'Put',
             headers:{
                 'Content-type':'application/json',
-                authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
             },
             body: JSON.stringify(productdata)
         })
