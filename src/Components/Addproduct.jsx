@@ -19,9 +19,6 @@ import { useNavigate } from "react-router-dom";
         // console.log(userId);
         let result = await fetch('https://ecommbackend-ixfo.onrender.com/addproduct',{
             method:'post',
-            headers:{
-                'Content-type':'application/json'
-            },
             body: JSON.stringify(productdata)
         })
         result = await result.json();

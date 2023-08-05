@@ -14,9 +14,6 @@ export default function Login() {
         console.log({email, pass})
         let result = await fetch('https://ecommbackend-ixfo.onrender.com/login',{
             method:'post',
-            headers:{
-                'Content-Type':'application/json'
-            },
             body:JSON.stringify({email, pass})
         })
         result = await result.json();
