@@ -20,8 +20,9 @@ export default function Login() {
             body:JSON.stringify({email, pass})
         })
         result = await result.json();
-        if(result.name){
-            localStorage.setItem('user', JSON.stringify(result));
+        if(result.key){
+            localStorage.setItem('user', JSON.stringify(result.user));
+            localStorage.setItem('token', JSON.stringify(result.key));
             navigate('/')
         }else{
             alert('plz enter correct details...')
