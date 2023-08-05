@@ -10,14 +10,19 @@ function Productlist() {
         getlist();
     },[])
     const getlist = async ()=>{
-        let result = await fetch('https://ecommbackend-ixfo.onrender.com/getlist');
+        let result = await fetch('https://ecommbackend-ixfo.onrender.com/getlist',{
+          headers:{
+            authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
+          }
+        });
         result = await result.json();
         setproducts(result);
         console.log(result);
     }
     const deleteproduct = async (id)=>{
        let result = await fetch(`https://ecommbackend-ixfo.onrender.com/deleteproduct/${id}`,{
-        method:'delete'
+        method:'delete',
+        authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
        })
        getlist();
     }
@@ -27,7 +32,11 @@ function Productlist() {
     }
     const searchbtn = async (e)=>{
       if(e){
-        let result = await fetch(`https://ecommbackend-ixfo.onrender.com/search/${e}`);
+        let result = await fetch(`https://ecommbackend-ixfo.onrender.com/search/${e}`,{
+          headers:{
+            authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
+          }
+        });
         result = await result.json();
         if(result){
           setproducts(result);

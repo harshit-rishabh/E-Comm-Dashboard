@@ -34,7 +34,8 @@ import { useNavigate, useParams } from "react-router-dom";
         let result = await fetch(`https://ecommbackend-ixfo.onrender.com/getlist/${params.id}`,{
             method:'Put',
             headers:{
-                'Content-type':'application/json'
+                'Content-type':'application/json',
+                authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
             },
             body: JSON.stringify(productdata)
         })
